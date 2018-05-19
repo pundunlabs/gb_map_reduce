@@ -1,0 +1,23 @@
+{application, gb_map_reduce,
+ [{description, "Map Reduce on Pundun"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {gb_map_reduce_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    compiler,
+    crypto
+   ]},
+  {env,[
+	{targets, [#{node => 'pundun832a87@sleepy',
+		     cookie => pundun}]},
+	{source, "checksum.erl"},
+	{mfa, {checksum, run, []}},
+	{timeout, 10000}
+       ]},
+  {modules, []},
+  {maintainers, ["Erdem Aksu"]},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

@@ -1,0 +1,6 @@
+-sname gb_map_reduce
+
+-setcookie gb_map_reduce_cookie
+
++K true
++A30
